@@ -27,6 +27,11 @@ $font-parallax : 'Dancing Script', cursive;
     padding: 20px 40px;
 }
 
+body {
+
+    overflow-x: hidden;
+}
+
 
 // .header {
 
@@ -1333,6 +1338,7 @@ $font-parallax : 'Dancing Script', cursive;
     width: 100%;
     position: absolute;
     z-index: 999;
+    
 }
 
 nav {
@@ -1342,8 +1348,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     min-height: 8vh;
-    background-color: none;
+    background-color: transparent;
     font-family: $font-text;
+    
 
     .nav-links {
 
@@ -1351,7 +1358,8 @@ nav {
         align-items: center;
         justify-content: space-between;
         column-gap: 25px;
-
+        background-color: transparent;
+        
         
 
         li {
@@ -1361,18 +1369,25 @@ nav {
             a {
 
                 text-decoration: none;
-                color: $color-text;
+                color: $color-white;
                 font-size: 14px;
                 font-weight: 500;
                 text-transform: uppercase;
                 position: relative;
+                transition: all .4s ease-in-out;
 
                 &.signup {
 
                     padding: 10px 20px;
-                    border: 1px solid $color-title-one;
+                    border: 1px solid $color-white;
                     position: relative;
-                    color: $color-title-one;
+                    color: $color-white;
+
+                    &:hover {
+
+                        color: $color-btn-one;
+                        border-color: $color-btn-one;
+                    }
 
                     &::after {
 
@@ -1419,7 +1434,13 @@ nav {
                     transform: scaleX(1);
                     transform-origin: left;
                     color: $color-title-two;
+                    
                           
+                }
+
+                &:hover {
+
+                    color: $color-btn-one;
                 }
                 
 

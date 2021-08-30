@@ -11,6 +11,10 @@
   padding: 20px 40px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .hero {
   width: 100%;
   background-image: url(../images/Decore.png);
@@ -1370,7 +1374,7 @@ nav {
           justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  background-color: none;
+  background-color: transparent;
   font-family: "Mulish", sans-serif;
 }
 
@@ -1386,6 +1390,7 @@ nav .nav-links {
           justify-content: space-between;
   -webkit-column-gap: 25px;
           column-gap: 25px;
+  background-color: transparent;
 }
 
 nav .nav-links li {
@@ -1394,18 +1399,25 @@ nav .nav-links li {
 
 nav .nav-links li a {
   text-decoration: none;
-  color: #3B3D3B;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   position: relative;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 nav .nav-links li a.signup {
   padding: 10px 20px;
-  border: 1px solid #000033;
+  border: 1px solid #ffffff;
   position: relative;
-  color: #000033;
+  color: #ffffff;
+}
+
+nav .nav-links li a.signup:hover {
+  color: #ffb31a;
+  border-color: #ffb31a;
 }
 
 nav .nav-links li a.signup::after {
@@ -1458,6 +1470,10 @@ nav .nav-links li a:hover::after {
   -webkit-transform-origin: left;
           transform-origin: left;
   color: #000d1a;
+}
+
+nav .nav-links li a:hover {
+  color: #ffb31a;
 }
 
 nav .nav-links li a.en {
